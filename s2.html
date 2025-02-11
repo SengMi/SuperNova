@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Speaking Practice - Intermediate Level</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+  <style>
+    /* Navbar Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: #ddd;
+      color: black;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content .sub-dropdown {
+      position: relative;
+    }
+    .dropdown-content .sub-dropdown .sub-dropdown-content {
+      display: none;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content .sub-dropdown:hover .sub-dropdown-content {
+      display: block;
+    }
+
+    /* Exercise Styles */
+    .exercise-item {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    .exercise-item img {
+      margin-right: 20px;
+      width: 120px;
+      height: 120px;
+    }
+    button {
+      margin-left: 15px;
+      padding: 5px 10px;
+    }
+    .feedback {
+      margin-left: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="pj.html" class="home-button">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">Skills</button>
+        <div class="dropdown-content">
+            <div class="sub-dropdown">
+                <a href="#">Listening</a>
+                <div class="sub-dropdown-content">
+                    <a href="l1.html">Basic</a>
+                    <a href="l2.html">Intermediate</a>
+                    <a href="l3.html">Advanced</a>
+                </div>
+            </div>
+            <div class="sub-dropdown">
+                <a href="#">Speaking</a>
+                <div class="sub-dropdown-content">
+                    <a href="s1.html">Basic</a>
+                    <a href="s2.html">Intermediate</a>
+                    <a href="s3.html">Advanced</a>
+                </div>
+            </div>
+            <div class="sub-dropdown">
+                <a href="#">Writing</a>
+                <div class="sub-dropdown-content">
+                    <a href="#">Basic</a>
+                    <a href="#">Intermediate</a>
+                    <a href="#">Advanced</a>
+                </div>
+            </div>
+            <div class="sub-dropdown">
+                <a href="#">Reading</a>
+                <div class="sub-dropdown-content">
+                    <a href="#">Basic</a>
+                    <a href="#">Intermediate</a>
+                    <a href="#">Advanced</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Vocabulary</button>
+        <div class="dropdown-content">
+            <a href="#">Basic</a>
+            <a href="#">Intermediate</a>
+            <a href="#">Advanced</a>
+        </div>
+    </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Grammar</button>
+        <div class="dropdown-content">
+            <a href="#">Basic</a>
+            <a href="#">Intermediate</a>
+            <a href="#">Advanced</a>
+        </div>
+    </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Test</button>
+        <div class="dropdown-content">
+            <a href="#">Basic</a>
+            <a href="#">Intermediate</a>
+            <a href="#">Advanced</a>
+        </div>
+    </div> 
+    <a href="#contact">Contact Us</a>
+</div>
+
+<h1>English Speaking Practice - Intermediate Level</h1>
+  
+<div class="exercise" id="sentences-exercises">
+  <h2>Speaking Test</h2>
+</div>
+
+<script>
+  const sentencesData = [
+    { sentence: 'I enjoy reading books during the weekend.', image: 'images/book.png' },
+    { sentence: 'He is planning to visit New York next month.', image: 'images/newyork.png' },
+    { sentence: 'She loves listening to classical music in the evening.', image: 'images/music.png' },
+    { sentence: 'They have been learning English for three years.', image: 'images/english.png' },
+    { sentence: 'The children were playing in the park all afternoon.', image: 'images/park.png' }
+  ];
+
+  const sentencesContainer = document.getElementById('sentences-exercises');
+
+  function createExerciseSection(container, data) {
+    data.forEach((item, index) => {
+      const exerciseDiv = document.createElement('div');
+      exerciseDiv.className = 'exercise-item';
+
+      const img = document.createElement('img');
+      img.src = item.image;
+      img.alt = item.sentence;
+      exerciseDiv.appendChild(img);
+
+      const title = document.createElement('span');
+      title.textContent = item.sentence;
+      exerciseDiv.appendChild(title);
+
+      const listenButton = document.createElement('button');
+      listenButton.textContent = 'Listen';
+      listenButton.id = `sentence-listen-${index}`;
+      exerciseDiv.appendChild(listenButton);
+
+      const recordButton = document.createElement('button');
+      recordButton.textContent = 'Record';
+      recordButton.id = `sentence-record-${index}`;
+      exerciseDiv.appendChild(recordButton);
+
+      const feedback = document.createElement('span');
+      feedback.id = `sentence-feedback-${index}`;
+      feedback.className = 'feedback';
+      exerciseDiv.appendChild(feedback);
+
+      container.appendChild(exerciseDiv);
+    });
+  }
+
+  function speakText(text) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US'; // Set the language as needed
+    window.speechSynthesis.speak(utterance);
+  }
+
+  function handlePlayback(index, text) {
+    const listenButton = document.getElementById(`sentence-listen-${index}`);
+
+    listenButton.addEventListener('click', () => {
+      speakText(text);
+    });
+  }
+
+  function handleRecording(index) {
+    const recordButton = document.getElementById(`sentence-record-${index}`);
+    const feedback = document.getElementById(`sentence-feedback-${index}`);
+
+    let mediaRecorder;
+    let audioChunks = [];
+
+    recordButton.addEventListener('click', async () => {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      mediaRecorder = new MediaRecorder(stream);
+
+      mediaRecorder.ondataavailable = (event) => {
+        audioChunks.push(event.data);
+      };
+
+      mediaRecorder.onstop = () => {
+        const userAudioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+
+        // Simulate feedback for demo purposes
+        feedback.textContent = 'Correct'; // In real scenarios, use actual logic to compare audio
+      };
+
+      mediaRecorder.start();
+      recordButton.disabled = true;
+      setTimeout(() => {
+        mediaRecorder.stop();
+        recordButton.disabled = false;
+      }, 5000); // Automatically stop recording after 5 seconds
+    });
+  }
+
+  createExerciseSection(sentencesContainer, sentencesData);
+
+  sentencesData.forEach((item, index) => {
+    handlePlayback(index, item.sentence);
+    handleRecording(index);
+  });
+</script>
+
+</body>
+</html>
+``

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Learning Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #ddd;
+            color: black;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content .sub-dropdown {
+            position: relative;
+        }
+        .dropdown-content .sub-dropdown .sub-dropdown-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content .sub-dropdown:hover .sub-dropdown-content {
+            display: block;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">Skills</button>
+        <div class="dropdown-content">
+            <div class="sub-dropdown">
+                <a href="#">Listening</a>
+                <div class="sub-dropdown-content">
+                    <a href="l1.html">Basic</a>
+                    <a href="l2.html">Intermediate</a>
+                    <a href="l3.html">Advanced</a>
+                </div>
+            </div>
+            <div class="sub-dropdown">
+                <a href="#">Speaking</a>
+                <div class="sub-dropdown-content">
+                    <a href="s1.html">Basic</a>
+                    <a href="s2.html">Intermediate</a>
+                    <a href="s3.html">Advanced</a>
+                </div>
+            </div>
+            <div class="sub-dropdown">
+                <a href="#">Writing</a>
+                <div class="sub-dropdown-content">
+                    <a href="#">Basic</a>
+                    <a href="#">Intermediate</a>
+                    <a href="#">Advanced</a>
+                </div>
+            </div>
+            <div class="sub-dropdown">
+                <a href="#">Reading</a>
+                <div class="sub-dropdown-content">
+                    <a href="#">Basic</a>
+                    <a href="#">Intermediate</a>
+                    <a href="#">Advanced</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Vocabulary</button>
+        <div class="dropdown-content">
+            <a href="#">Basic</a>
+            <a href="#">Intermediate</a>
+            <a href="#">Advanced</a>
+        </div>
+    </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Grammar</button>
+        <div class="dropdown-content">
+            <a href="#">Basic</a>
+            <a href="#">Intermediate</a>
+            <a href="#">Advanced</a>
+        </div>
+    </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Test</button>
+        <div class="dropdown-content">
+            <a href="#">Basic</a>
+            <a href="#">Intermediate</a>
+            <a href="#">Advanced</a>
+        </div>
+    </div> 
+    <a href="#contact">Contact Us</a>
+</div>
+
+<div class="container">
+    <h1>Welcome to the English Learning Platform</h1>
+    <p>This platform helps you improve your English skills in Listening, Speaking, Writing, and Reading at various levels. Explore the sections to get started!</p>
+</div>
+
+</body>
+</html>

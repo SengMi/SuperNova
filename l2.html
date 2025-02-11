@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Intermediate Level Listening</title>
+    <style>
+        /* Navbar Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #ddd;
+            color: black;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content .sub-dropdown {
+            position: relative;
+        }
+        .dropdown-content .sub-dropdown .sub-dropdown-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content .sub-dropdown:hover .sub-dropdown-content {
+            display: block;
+        }
+
+        /* Listening Page Styles */
+        h1 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 28px;
+        }
+        
+        .exercise {
+            display: flex;
+            margin-bottom: 40px;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+      
+        .exercise-left {
+            width: 150px;
+            margin-right: 700px; /* Adjusted margin */
+        }
+      
+        .exercise-right {
+            flex-grow: 1;
+        }
+      
+        .exercise-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+      
+        .audio-player {
+            margin-bottom: 10px;
+        }
+        
+        .transcript {
+            margin-bottom: 10px;
+        }
+        
+        .questions {
+            margin-bottom: 10px;
+        }
+        
+        .answers {
+            margin-bottom: 10px;
+        }
+      
+        .feedback {
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+      
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-family: Arial, sans-serif;
+        }
+      
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+      
+        button:active {
+            background-color: #388e3c;
+            transform: scale(0.9);
+        }
+
+        /* Home Button Styles */
+        .home-button {
+            float: right;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            background-color: #4CAF50;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .home-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="pj.html" class="home-button">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">Skills</button>
+        <div class="dropdown-content">
+            <div class="sub-dropdown">
+                <a href="#">Listening</a>
+                <div class="sub-dropdown-content">
+                    <a href="l1.html">Basic</a>
+                    <a href="l2.html">Intermediate</a> <!-- Current Page -->
+                    <a href="l3.html">Advanced</a>
+                </div>
+            </div>
+            <div class="sub-dropdown">
+                <a href="#">Speaking</a>
+                <div class="sub-dropdown-content">
+                    <a href="s1.html">Basic</a>
+                    <a href="s2.html">Intermediate</a>
+                    <a href="s3.html">Advanced</a>
+                </div>
+            </div>
+            <div class="sub-dropdown">
+                <a href="#">Writing</a>
+                <div class="sub-dropdown-content">
+                    <a href="#">Basic</a>
+                    <a href="#">Intermediate</a>
+                    <a href="#">Advanced</a>
+                </div>
+            </div>
+            <div class="sub-dropdown">
+                <a href="#">Reading</a>
+                <div class="sub-dropdown-content">
+                    <a href="#">Basic</a>
+                    <a href="#">Intermediate</a>
+                    <a href="#">Advanced</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Vocabulary</button>
+        <div class="dropdown-content">
+            <a href="#">Basic</a>
+            <a href="#">Intermediate</a>
+            <a href="#">Advanced</a>
+        </div>
+    </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Grammar</button>
+        <div class="dropdown-content">
+            <a href="#">Basic</a>
+            <a href="#">Intermediate</a>
+            <a href="#">Advanced</a>
+        </div>
+    </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Test</button>
+        <div class="dropdown-content">
+            <a href="#">Basic</a>
+            <a href="#">Intermediate</a>
+            <a href="#">Advanced</a>
+        </div>
+    </div> 
+    <a href="#contact">Contact Us</a>
+</div>
+
+<h1>English Intermediate Level Listening</h1>
+<div id="exercise-container"></div>
+<div class="feedback"></div>
+
+<script>
+    const exercises = [
+        {
+            title: 'Listening Exercise 1',
+            audioSrc: 'wedding.mp3',
+            transcriptText: 'The Wedding Day.',
+            questions: [
+                { question: 'What is the fianace of Susan name? ________________', correctAnswer: 'Michael' }
+            ],
+            leftImage: 'wed.jpg',
+        },
+        {
+            title: 'Listening Exercise 2',
+            audioSrc: 'christmas.mp3',
+            transcriptText: 'Christmas.',
+            questions: [
+                { question: 'Who is they ready for? ________________', correctAnswer: 'Santa Clause' }
+            ],
+            leftImage: 'christ.jpg',
+        },
+        {
+            title: 'Listening Exercise 3',
+            audioSrc: 'halloween.mp3',
+            transcriptText: 'Halloween Night.',
+            questions: [
+                { question: 'What costume did his mom buy for him? ________________', correctAnswer: 'goat costume' }
+            ],
+            leftImage: 'hall.jpg',
+        },
+        {
+            title: 'Listening Exercise 4',
+            audioSrc: 'thanks.mp3',
+            transcriptText: 'Thanksgiving day.',
+            questions: [
+                { question: 'How many weight the turkey is? ________________', correctAnswer: '30 pounds' }
+            ],
+            leftImage: 'thank.jpg',
+        },
+        {
+            title: 'Listening Exercise 5',
+            audioSrc: 'remem.mp3',
+            transcriptText: 'The Rememberance Day.',
+            questions: [
+                { question: 'What day is the rememberance day? ________________', correctAnswer: 'November 11'   
+                }
+            ],
+            leftImage: 'remem.jpeg',
+        }
+    ];
+
+    const exerciseContainer = document.getElementById('exercise-container');
+    const feedbackDiv = document.querySelector('.feedback');
+
+    function loadExercises() {
+        exercises.forEach((exercise, index) => {
+            const exerciseDiv = document.createElement('div');
+            exerciseDiv.classList.add('exercise');
+
+            const leftImageDiv = document.createElement('div');
+            leftImageDiv.classList.add('exercise-left');
+            const leftImage = document.createElement('img');
+            leftImage.src = exercise.leftImage;
+            leftImage.alt = `Exercise ${index + 1} Image`;
+            leftImage.style.width = '650px'; // Adjusted width
+            leftImageDiv.appendChild(leftImage);
+            exerciseDiv.appendChild(leftImageDiv);
+
+            const rightDiv = document.createElement('div');
+            rightDiv.classList.add('exercise-right');
+
+            const title = document.createElement('div');
+            title.classList.add('exercise-title');
+            title.textContent = exercise.title;
+            rightDiv.appendChild(title);
+
+            const audioPlayer = document.createElement('div');
+            audioPlayer.classList.add('audio-player');
+            const audio = document.createElement('audio');
+            audio.controls = true;
+            audio.src = exercise.audioSrc;
+            audioPlayer.appendChild(audio);
+            rightDiv.appendChild(audioPlayer);
+
+            const transcriptDiv = document.createElement('div');
+            transcriptDiv.classList.add('transcript');
+            transcriptDiv.textContent = exercise.transcriptText;
+            rightDiv.appendChild(transcriptDiv);
+
+            const questionsDiv = document.createElement('div');
+            questionsDiv.classList.add('questions');
+            exercise.questions.forEach((question, qIndex) => {
+                const questionElement = document.createElement('p');
+                questionElement.textContent = question.question;
+                questionsDiv.appendChild(questionElement);
+
+                const inputElement = document.createElement('input');
+                inputElement.type = 'text';
+                inputElement.name = `question${index}-${qIndex}`;
+                questionsDiv.appendChild(inputElement);
+            });
+            rightDiv.appendChild(questionsDiv);
+
+            exerciseDiv.appendChild(rightDiv);
+            exerciseContainer.appendChild(exerciseDiv);
+        });
+
+        const checkButton = document.createElement('button');
+        checkButton.textContent = 'Check Answers';
+        checkButton.onclick = checkAnswers;
+        exerciseContainer.appendChild(checkButton);
+    }
+
+    function checkAnswers() {
+        let correctCount = 0;
+
+        exercises.forEach((exercise, index) => {
+            exercise.questions.forEach((question, qIndex) => {
+                const input = document.querySelector(`input[name="question${index}-${qIndex}"]`);
+                if (input && input.value.trim().toLowerCase() === question.correctAnswer.toLowerCase()) {
+                    correctCount++;
+                }
+            });
+        });
+
+        feedbackDiv.textContent = `You got ${correctCount} out of ${exercises.length} correct.`;
+        
+        // Adding the animation effect
+        feedbackDiv.style.opacity = 0;
+        feedbackDiv.style.transform = 'scale(0.5)';
+        
+        setTimeout(() => {
+            feedbackDiv.style.opacity = 1;
+            feedbackDiv.style.transform = 'scale(1)';
+        }, 100);
+    }
+
+    loadExercises();
+</script>
+
+</body>
+</html>

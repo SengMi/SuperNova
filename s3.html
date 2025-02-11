@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced English Speaking Practice</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar a, .navbar button {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      border: none;
+      background-color: inherit;
+    }
+
+    .navbar a:hover, .navbar button:hover, .dropdown:hover .dropbtn {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      background-color: inherit;
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      left: 0;
+      top: 100%;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content .sub-dropdown {
+      position: relative;
+    }
+
+    .dropdown-content .sub-dropdown .sub-dropdown-content {
+      display: none;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+
+    .dropdown-content .sub-dropdown:hover .sub-dropdown-content {
+      display: block;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .exercise-item {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .exercise-item img {
+      margin-right: 15px;
+      width: 100px;
+      height: 100px;
+    }
+
+    button {
+      margin-left: 10px;
+    }
+
+    .feedback {
+      margin-left: 10px;
+      font-weight: bold;
+      color: green;
+    }
+
+    .incorrect {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Skills</button>
+      <div class="dropdown-content">
+        <div class="sub-dropdown">
+          <a href="#">Listening</a>
+          <div class="sub-dropdown-content">
+            <a href="l1.html">Basic</a>
+            <a href="l2.html">Intermediate</a>
+            <a href="l3.html">Advanced</a>
+          </div>
+        </div>
+        <div class="sub-dropdown">
+          <a href="#">Speaking</a>
+          <div class="sub-dropdown-content">
+            <a href="s1.html">Basic</a>
+            <a href="s2.html">Intermediate</a>
+            <a href="s3.html">Advanced</a>
+          </div>
+        </div>
+        <div class="sub-dropdown">
+          <a href="#">Writing</a>
+          <div class="sub-dropdown-content">
+            <a href="#">Basic</a>
+            <a href="#">Intermediate</a>
+            <a href="#">Advanced</a>
+          </div>
+        </div>
+        <div class="sub-dropdown">
+          <a href="#">Reading</a>
+          <div class="sub-dropdown-content">
+            <a href="#">Basic</a>
+            <a href="#">Intermediate</a>
+            <a href="#">Advanced</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Vocabulary</button>
+      <div class="dropdown-content">
+        <a href="#">Basic</a>
+        <a href="#">Intermediate</a>
+        <a href="#">Advanced</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Grammar</button>
+      <div class="dropdown-content">
+        <a href="#">Basic</a>
+        <a href="#">Intermediate</a>
+        <a href="#">Advanced</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Test</button>
+      <div class="dropdown-content">
+        <a href="#">Basic</a>
+        <a href="#">Intermediate</a>
+        <a href="#">Advanced</a>
+      </div>
+    </div>
+    <a href="#contact">Contact Us</a>
+  </div>
+
+  <div class="container">
+    <h1>Advanced English Speaking Practice</h1>
+
+    <div class="exercise" id="vocabulary-exercises">
+      <h2>Advanced Vocabulary Practice</h2>
+    </div>
+
+    <div class="exercise" id="sentences-exercises">
+      <h2>Advanced Sentences Practice</h2>
+    </div>
+  </div>
+
+  <script>
+    const vocabularyData = [
+      { word: 'aberration', image: 'images/aberration.png' },
+      { word: 'cogent', image: 'images/cogent.png' },
+      { word: 'debilitate', image: 'images/debilitate.png' },
+      { word: 'elucidate', image: 'images/elucidate.png' },
+      { word: 'quintessential', image: 'images/quintessential.png' },
+      { word: 'subterfuge', image: 'images/subterfuge.png' },
+      { word: 'tangential', image: 'images/tangential.png' },
+      { word: 'ubiquitous', image: 'images/ubiquitous.png' },
+      { word: 'vicarious', image: 'images/vicarious.png' },
+      { word: 'zealous', image: 'images/zealous.png' }
+    ];
+
+    const sentencesData = [
+      { sentence: 'The aberration in his behavior was alarming.', image: 'images/aberration.png' },
+      { sentence: 'Her argument was cogent and convincing.', image: 'images/cogent.png' },
+      { sentence: 'The disease debilitates the patient over time.', image: 'images/debilitate.png' },
+      { sentence: 'He could not elucidate his point clearly.', image: 'images/elucidate.png' },
+      { sentence: 'She is the quintessential example of a strong leader.', image: 'images/quintessential.png' },
+      { sentence: 'He used subterfuge to escape the situation.', image: 'images/subterfuge.png' },
+      { sentence: 'His remarks were tangential to the main topic.', image: 'images/tangential.png' },
+      { sentence: 'Mobile phones are ubiquitous in modern society.', image: 'images/ubiquitous.png' },
+      { sentence: 'She gained vicarious pleasure from reading travel books.', image: 'images/vicarious.png' },
+      { sentence: 'He was zealous in his pursuit of knowledge.', image: 'images/zealous.png' }
+    ];
+
+    const vocabularyContainer = document.getElementById('vocabulary-exercises');
+    const sentencesContainer = document.getElementById('sentences-exercises');
+
+    function createExerciseSection(container, data, type) {
+      data.forEach((item, index) => {
+        const exerciseDiv = document.createElement('div');
+        exerciseDiv.className = 'exercise-item';
+
+        const img = document.createElement('img');
+        img.src = item.image;
+        img.alt = item.word || item.sentence;
+        exerciseDiv.appendChild(img);
+
+        const title = document.createElement('span');
+        title.textContent = type === 'vocabulary' ? item.word : item.sentence;
+        exerciseDiv.appendChild(title);
+
+        const listenButton = document.createElement('button');
+        listenButton.textContent = 'Listen';
+        listenButton.id = `${type}-listen-${index}`;
+        exerciseDiv.appendChild(listenButton);
+
+        const recordButton = document.createElement('button');
+        recordButton.textContent = 'Record';
+        recordButton.id = `${type}-record-${index}`;
+        exerciseDiv.appendChild(recordButton);
+
+        const feedback = document.createElement('span');
+        feedback.id = `${type}-feedback-${index}`;
+        feedback.className = 'feedback';
+        exerciseDiv.appendChild(feedback);
+
+        container.appendChild(exerciseDiv);
+      });
+    }
+
+    function speakText(text) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US'; 
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function handlePlayback(type, index, text) {
+      const listenButton = document.getElementById(`${type}-listen-${index}`);
+
+      listenButton.addEventListener('click', () => {
+        speakText(text);
+      });
+    }
+
+    function handleRecording(type, index, correctText) {
+      const recordButton = document.getElementById(`${type}-record-${index}`);
+      const feedback = document.getElementById(`${type}-feedback-${index}`);
+
+      let mediaRecorder;
+      let audioChunks = [];
+
+      recordButton.addEventListener('click', async () => {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        mediaRecorder = new MediaRecorder(stream);
+
+        mediaRecorder.ondataavailable = (event) => {
+          audioChunks.push(event.data);
+        };
+
+        mediaRecorder.onstop = () => {
+          const userAudioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+
+          // Simulated feedback for demonstration (replace with actual speech recognition logic)
+          const isCorrect = Math.random() > 0.5; // 50% chance to display correct/incorrect
+
+          if (isCorrect) {
+            feedback.textContent = 'Correct';
+            feedback.classList.remove('incorrect');
+          } else {
+            feedback.textContent = 'Incorrect';
+            feedback.classList.add('incorrect');
+          }
+
+          recordButton.disabled = false;
+        };
+
+        mediaRecorder.start();
+        recordButton.disabled = true;
+        setTimeout(() => mediaRecorder.stop(), 5000); 
+      });
+    }
+
+    createExerciseSection(vocabularyContainer, vocabularyData, 'vocabulary');
+    createExerciseSection(sentencesContainer, sentencesData, 'sentences');
+
+    vocabularyData.forEach((item, index) => {
+      handlePlayback('vocabulary', index, item.word);
+      handleRecording('vocabulary', index, item.word);
+    });
+
+    sentencesData.forEach((item, index) => {
+      handlePlayback('sentences', index, item.sentence);
+      handleRecording('sentences', index, item.sentence);
+    });
+  </script>
+</body>
+</html>
